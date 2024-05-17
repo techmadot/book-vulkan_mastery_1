@@ -1,0 +1,7 @@
+# 
+.vs/
+x64
+imgui.ini
+*.user
+
+AndroidProjects/**/src/main/assets/*

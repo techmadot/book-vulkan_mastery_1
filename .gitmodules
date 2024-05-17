@@ -1,0 +1,12 @@
+[submodule "assimp"]
+	path = assimp
+	url = https://github.com/assimp/assimp.git
+[submodule "Common/imgui"]
+	path = Common/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "Common/glm"]
+	path = Common/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "Common/assimp"]
+	path = Common/assimp
+	url = https://github.com/assimp/assimp.git

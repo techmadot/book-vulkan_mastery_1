@@ -1,0 +1,8 @@
+## 基本的に自動変換は防止.
+* -text
+*.sln text eol=crlf
+*.vcxproj text eol=crlf
+*.h text eol=crlf
+*.cpp text eol=crlf
+*.bat text eol=crlf
+*.sh text eol=lf

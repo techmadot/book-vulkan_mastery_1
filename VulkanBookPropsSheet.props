@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Common\include</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Common\include;$(ProjectDir)..\Common\GLFW\include;$(ProjectDir)..\Common\imgui;$(ProjectDir)..\Common\glm;$(ProjectDir)..\Common\stb;$(VULKAN_SDK)\Include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\Common\lib</AdditionalLibraryDirectories>
+    </Link>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\Common\GLFW\lib\lib-vc2022;$(VULKAN_SDK)\Lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3dll.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CopyFileToFolders />
+    <CopyFileToFolders />
+    <CopyFileToFolders>
+      <DestinationFileName />
+    </CopyFileToFolders>
+    <CopyFileToFolders>
+      <DestinationFileName />
+    </CopyFileToFolders>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)..\Common\lib\glfw3.dll $(OutDir)</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)..\Common\GLFW\lib\lib-vc2022\glfw3.dll $(OutDir)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
